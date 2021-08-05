@@ -1,7 +1,7 @@
 import discord
 import random
 
-TOKEN = 'ODcxMTY4NTU0MDk4MTMwOTU0.YQXY8A.mneWhS8wxZuHw4IsDH0_kDAMJjM'
+TOKEN = 'ODcxMTY4NTU0MDk4MTMwOTU0.YQXY8A.hBE7l6_9112s8QGTTYROnqfH79Q'
 
 client = discord.Client()
 
@@ -17,12 +17,12 @@ async def on_message(message):
 	channel = str(message.channel.name)
 	print(f'{username}: {user_message} ({channel})')
 	
-	if message.author == client.user:
+	if message.author == 'ConnorBot#8331':
 		return
 		
 	if user_message.lower() == '!Connor intro':
-		response = f'My name is Connor. I’m the android sent by CyberLife to simp for Haruka.'
-		await message.channel.send(response)
+		await message.channel.send('My name is Connor. I’m the android sent by CyberLife to simp for Haruka.')
+		print('My name is Connor. I’m the android sent by CyberLife to simp for Haruka.')
 		return
 
 client.run(TOKEN)
