@@ -1,3 +1,7 @@
+#Author: Captain Gazpacho
+#Date Completed: Aug XX 2021
+#Special Thanks: Phantom Cultist Ryuk, Darth Yog, High Inquisitor
+
 import os
 import random
 
@@ -23,7 +27,12 @@ async def on_message(message):
 async def on_ready():
 	print('My name is Connor. I’m the android sent by CyberLife to simp for Haruka.')
 
-@bot.command(name = 'Connor', intro = 'Intro')
+@bot.command(name = 'ConnorHelp', help = 'Describes the purpose of the program')
+async def ConnorHelp(ctx):
+	response = 'This is a program to automatically simp for Haruka'
+	await ctx.send(response)
+
+@bot.command(name = 'ConnorIntro', help = 'Makes the bot introduce itself')
 async def connorIntro(ctx):
 	response = 'My name is Connor. I’m the android sent by CyberLife to simp for Haruka.'
 	await ctx.send(response)
